@@ -49,30 +49,29 @@ export function AboutMe({className}) {
             className={cn("relative", className)}
             id={"about"}
         >
-            <div className={"w-[40%]"}>
+            <div className={"w-full md:w-[40%] h-fit"}>
                 <p className={'font-semibold text-xl mb-4'}>
                     +3 years of experience in software engineering
                 </p>
                 <p className={'font-semibold text-xl mb-4'}>
                     Master's degree in computer science ( EPITA Cybersecurity Engineer )
                 </p>
+
+                <p className={'font-semibold text-xl mb-4'}>
+                    French and English speaker
+                </p>
+
                 <p className={"text-gray-300"}>
-                    I am a software engineer with a passion for AI and blockchain technology. I have a strong
-                    background
-                    in
-                    software engineering and have worked on a variety of projects in the past. I am always looking
-                    for
-                    new
-                    opportunities to learn and grow as a developer. I am currently looking for new opportunities to
-                    work
-                    on
-                    exciting projects that will allow me to use my skills and knowledge to make a positive impact on
-                    the
+                    I am a software engineer with a passion for AI and blockchain technology.
+                    I have a strong background in software engineering and have worked on a variety of projects in the
+                    past.
+                    I am currently looking for new opportunities to work on exciting projects
+                    that will allow me to use my skills and knowledge to make a positive impact on the
                     world.
                 </p>
             </div>
             <div
-                className="relative flex w-full items-center justify-center overflow-hidden p-10 h-full"
+                className="relative w-full items-center justify-center overflow-hidden p-10 h-full hidden md:flex"
                 ref={containerRef}
             >
                 <div
