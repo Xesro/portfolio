@@ -1,0 +1,23 @@
+services:
+  app:
+    image: portfolio-art:{{short_sha}}
+    command: sh -c "npm run start"
+    networks:
+      - traefik-net
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [ node.role == manager ]
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.portfolio-art.entrypoints=https"
+        - "traefik.http.routers.portfolio-art.rule=Host(`plebs.fr`)"
+        - "traefik.http.routers.portfolio-art.tls=true"
+        - "traefik.http.routers.portfolio-art.tls.certresolver=base_resolver"
+        - "traefik.http.routers.portfolio-art.service=portfolio-art"
+        - "traefik.http.services.portfolio-art.loadbalancer.server.port=3000"
+
+networks:
+  traefik-net:
+      external: true

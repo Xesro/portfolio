@@ -14,11 +14,11 @@ import {Footer} from "@/components/footer";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-        <div className={"textured-background w-screen h-screen px-10 md:px-24 py-10"}>
+        <div className={"textured-background w-screen px-8 md:px-24 py-10 max-w-[1500px]"}>
             <Navbar/>
-            <HStack className={'w-full h-full items-center'} id={"home"}>
+            <HStack className={'w-full h-full items-start mt-20 md:mt-0 md:items-center'} id={"home"}>
                 <div className={"w-full md:w-[40%]"}>
-                    <div className={" text-3xl md:text-7xl font-bold"}>
+                    <div className={" text-6xl md:text-7xl font-bold"}>
                         <h1>Hi !</h1>
                         <h1>I am <span className={"text-primary"}>Arthur</span></h1>
                         <h1>Software Engineer 🚀</h1>
@@ -29,7 +29,7 @@ export default function Home() {
                     <ShimmerButton  className={"mt-4 cursor-pointer"} background={"hsl(var(--primary))"} href={"#contact"}>Contact me</ShimmerButton>
                 </div>
                 <VStack className={"gap-6 relative w-[60%] hidden md:flex"}>
-                    <Image src={'/hex_glow.svg'} alt={'blob'} width={1000} height={950} className={"absolute top-0 z-0"} style={{"max-width": "none"}}/>
+                    <Image src={'/hex_glow.svg'} alt={'blob'} width={1000} height={950} className={"absolute top-0 z-0"} style={{"maxWidth": "none"}}/>
                     <Image
                         src="/pp_nobg.png"
                         width={400}
@@ -42,15 +42,12 @@ export default function Home() {
             </HStack>
         </div>
 
-        <Section className={"relative"}>
+        <Section className={"relative max-w-[1500px]"}>
             <Image src={"/shape_bg.svg"} alt={"shape-bg"} width={"600"} height={"1900"} className={"absolute -right-3 -top-56 -rotate-45 opacity-10"}/>
             <AboutMe className={"mb-28"}/>
             <TechStack className={"mb-28"}/>
             <Experiences className={"mb-28"}/>
             <Contact/>
-        </Section>
-        <Section>
-
         </Section>
         <Footer/>
     </main>
