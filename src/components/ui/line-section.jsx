@@ -7,9 +7,9 @@ export function LineSection({className, children, title, id}) {
     return (
         <HStack className={cn("items-stretch w-full", className)} id={id}>
             <Guideline/>
-            <VStack className={"items-start grow"}>
-                <h2 className={'text-6xl font-semibold  h-fit mb-6'}>{title}</h2>
-                <HStack className={"content-evenly w-full"}>
+            <VStack className={"items-start grow w-full"}>
+                <h2 className={'text-4xl md:text-6xl font-semibold  h-fit mb-6'}>{title}</h2>
+                <HStack className={"content-evenly w-full flex-wrap md:flex-nowrap"}>
                     {children}
                 </HStack>
             </VStack>

@@ -1,3 +1,5 @@
+"use client"
+
 import OrbitingCircles from "@/components/magicui/orbiting-circles";
 import {CircularProgressBar} from "@/components/ui/circular-progress-bar";
 import {VStack} from "@/components/ui/v-stack";
@@ -26,6 +28,7 @@ import symfony from "../../public/tech-icons/symfony.svg"
 import terraform from "../../public/tech-icons/terraform.svg"
 import typescript from "../../public/tech-icons/typescript.svg"
 import git from "../../public/tech-icons/git.svg"
+import {useEffect, useState} from "react";
 
 const innerCircleIcons = [
     ansible,
@@ -104,9 +107,26 @@ export function TechStack({className}) {
 
 
 function OrbitingTechIcons({className}) {
+    const [isMd, setIsMd] = useState(false)
+    const [isLg, setIsLg] = useState(false)
+
+
+    useEffect(() => {
+        setIsMd(window.screen.width > 768)
+        setIsLg(window.screen.width > 1024)
+        const updateState = () => {
+            setIsMd(window.screen.width > 768)
+            setIsLg(window.screen.width > 1024)
+        }
+        window.addEventListener("resize", updateState);
+
+        return () => window.removeEventListener("resize", updateState)
+
+    }, [window.screen.width])
+
     return (
         <div
-            className={cn("relative flex h-[500px] w-full flex-col items-center justify-center", className)}>
+            className={cn("relative flex h-[290px] md:h-[450px] lg:h-[500px] w-full flex-col items-center justify-center", className)}>
       <span
           className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
         Stack
@@ -117,7 +137,7 @@ function OrbitingTechIcons({className}) {
                     className="size-[30px] border-none bg-transparent"
                     duration={20}
                     delay={20 / innerCircleIcons.length * index}
-                    radius={80}
+                    radius={isLg ? 80: isMd ? 56: 50}
                     key={index}
                 >
                     <Image src={icon} alt={"tech icon"}/>
@@ -129,7 +149,7 @@ function OrbitingTechIcons({className}) {
                     className="size-[50px] border-none bg-transparent"
                     duration={20}
                     delay={20 / outerCircleIcons.length * index}
-                    radius={190}
+                    radius={isLg ? 190 : isMd ? 145 : 105}
                     key={index}
                 >
                     <Image src={icon} alt={"tech icon"}/>
