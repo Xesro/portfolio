@@ -13,7 +13,7 @@ import {Footer} from "@/components/footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="flex min-h-screen flex-col items-center justify-between overflow-hidden">
         <div className={"textured-background w-screen px-8 md:px-24 pt-10 pb-32  max-w-[1500px]"}>
             <Navbar/>
             <HStack className={'w-full h-full items-start mt-20 md:mt-0 md:items-center'} id={"home"}>
