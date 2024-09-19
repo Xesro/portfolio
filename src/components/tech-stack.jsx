@@ -72,9 +72,10 @@ export function TechStack({className}) {
                 <HStack className={"mt-4 items-start justify-start flex-wrap"}>
                     <CircularProgressBar percentage={100} name={"JS / TS"}/>
                     <CircularProgressBar percentage={100} name={"Nest"}/>
-                    <CircularProgressBar percentage={90} name={"React"}/>
+                    <CircularProgressBar percentage={100} name={"React"}/>
                     <CircularProgressBar percentage={80} name={"NextJs"}/>
-                    <CircularProgressBar percentage={90} name={"HTML CSS"}/>
+                    <CircularProgressBar percentage={70} name={"Solidity"}/>
+                    <CircularProgressBar percentage={100} name={"HTML CSS"}/>
                     <CircularProgressBar percentage={90} name={"Python"}/>
                     <CircularProgressBar percentage={100} name={"PHP"}/>
                     <CircularProgressBar percentage={90} name={"Symfony"}/>

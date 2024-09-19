@@ -76,7 +76,7 @@ const experiences = [
     {
         Icon: Droplet,
         name: "Lilo",
-        description: "Use the calendar to filter your files by date.",
+        description: "Backend engineer",
         className: "col-span-3 lg:col-span-2",
         background: (
             <Image
