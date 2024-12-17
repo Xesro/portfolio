@@ -89,9 +89,10 @@ export function TechStack({className}) {
                     <CircularProgressBar percentage={100} name={"Git"}/>
                     <CircularProgressBar percentage={60} name={"Terraform"}/>
                     <CircularProgressBar percentage={60} name={"Ansible"}/>
-                    <CircularProgressBar percentage={80} name={"GCP"}/>
+                    <CircularProgressBar percentage={60} name={"GCP"}/>
+                    <CircularProgressBar percentage={60} name={"AWS"}/>
                     <CircularProgressBar percentage={100} name={"Docker"}/>
-                    <CircularProgressBar percentage={70} name={"Swarm / K3S"}/>
+                    <CircularProgressBar percentage={60} name={"Swarm / K3S"}/>
                 </HStack>
                 <p className={"mt-4 font-semibold"}>
                     Databases

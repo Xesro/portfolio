@@ -23,7 +23,7 @@ export default function Home() {
                         <h1>I am <span className={"text-primary"}>Arthur</span></h1>
                         <h1>Software Engineer 🚀</h1>
                     </div>
-                    <h2 className={"text-lg  text-gray-300 mt-4"}>Willing to build AI and blockchain
+                    <h2 className={"text-lg  text-gray-300 mt-4"}>Willing to build Blockchain and AI
                         software of tomorrow</h2>
                     <SubHeadLine/>
                     <ShimmerButton  className={"mt-4 cursor-pointer"} background={"hsl(var(--primary))"} href={"#contact"}>Contact me</ShimmerButton>

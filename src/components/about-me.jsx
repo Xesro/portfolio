@@ -56,13 +56,16 @@ export function AboutMe({className}) {
                 <p className={'font-semibold text-xl mb-4'}>
                     Master's degree in computer science ( EPITA Cybersecurity Engineer )
                 </p>
+                <p className={'font-semibold text-xl mb-4'}>
+                    AWS Associate Solution Architect - In progress
+                </p>
 
                 <p className={'font-semibold text-xl mb-4'}>
                     French and English speaker
                 </p>
 
                 <p className={"text-gray-300"}>
-                    I am a software engineer with a passion for AI and blockchain technology.
+                    I am a software engineer with a passion for Blockchain and AI technology.
                     I have a strong background in software engineering and have worked on a variety of projects in the
                     past.
                     I am currently looking for new opportunities to work on exciting projects
